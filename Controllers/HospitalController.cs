@@ -26,28 +26,28 @@ namespace hospital.Controllers
 
             return View();
         }
-        [HttpGet]
+        
         public IActionResult Book()
         {
             return View();
         }
-        [HttpPost]
-        public IActionResult Book(Book appin )
-        {
-            var book = new Book();
-            {
+        //[HttpPost]
+        //public IActionResult Book(Book appin )
+        //{
+        //    var book = new Book();
+        //    {
               
-                =appin.PatientName,
-                 PatientAge = appin.PatientAge,
-                    Pemail = appin.Pemail,
-                    Dname = appin.Dname,
-                   cno = appin.Cno
+        //        =appin.PatientName,
+        //         PatientAge = appin.PatientAge,
+        //            Pemail = appin.Pemail,
+        //            Dname = appin.Dname,
+        //           cno = appin.Cno
 
-            };
-        }
+        //    };
+        //}
 
 
-        }
+        //}
     }
 
 }
