@@ -11,8 +11,8 @@ namespace hospital.Data
         {
             
         }
-        public DbSet<dtabase> hospitals { get; set; }
-        public DbSet<Appointments> Appointments { get; set; }
+        
+     
         public DbSet<DocDb> Docs { get; set; }
         public DbSet<Book> Books { get; set; }
         public DbSet<Doctors>  docts{ get; set; }
@@ -22,16 +22,6 @@ namespace hospital.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<dtabase>().HasData(
-                new dtabase { id = 1, name = " Arun Kumar", description = "cardiologist" },
-                new dtabase { id = 2, name = " Venugopal Iyer", description = "dentist" },
-                new dtabase { id = 3, name = "steve rogers", description = "General Physician" },
-                new dtabase { id = 4, name = "Dr.Krishna Vasudev ", description = "Emergency OPD" }
-                );
-            modelBuilder.Entity<Appointments>().HasData(
-            new Appointments { id = 1, PatientName = " Arun Kumar", PatientAge = "18" }
-
-            );
                  modelBuilder.Entity<DocDb>().HasData(
                 new DocDb { id = 1, name = " Arun Kumar", description = "cardiologist" ,FEES=2000},
                 new DocDb { id = 2, name = " Venugopal Iyer", description = "dentist", FEES = 1500 },

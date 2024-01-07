@@ -14,6 +14,39 @@
     </div>
 
 </div>
+<div>
+    <table class="table table-bordered table-striped" style="margin-top:5vh">
+        <tr>
+            <th>
+                Doctor Name
+            </th>
+            <th>
+                Speciality
+            </th>
+            <th>
+                Fees
+            </th>
+        </tr>
+        <thead>
+        </thead>
+        <tbody>
+            @foreach (var obj in Model)
+            {
+                <tr>
+                    <td>
+                        @obj.name
+                    </td>
+                    <td>
+                        @obj.description
+                    </td>
+                    <td>
+                        @obj.FEES
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
 <section class="container-fluid">
     <div style="margin-top:5vh">
         <h2 style="font:bolder">
@@ -88,37 +121,7 @@
     </div>
 </section>
 <div style="height:14vh"></div>
-@*<table class="table table-bordered table-striped" style="margin-top:5vh">
-    <tr>
-        <th>
-            Doctor Name
-        </th>
-        <th>
-            Speciality
-        </th>
-        <th>
-            Fees
-        </th>
-    </tr>
-    <thead>
 
-    </thead>
-    <tbody>
-        @foreach (var obj in Model) {
-        <tr>
-            <td>
-                @obj.name
-            </td>
-            <td>
-                @obj.description
-            </td>
-             <td>
-                @obj.FEES
-            </td>
-        </tr>
-        }
-    </tbody>
-</table>*@
 @*<div class="row pb-3">
     
     <div class="col-lg-3 col-sm-6">

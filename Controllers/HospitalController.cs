@@ -1,8 +1,7 @@
 ﻿using hospital.Data;
 using hospital.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.CodeAnalysis.VisualBasic;
-using Microsoft.Data.SqlClient;
+
 
 
 
@@ -12,7 +11,6 @@ namespace hospital.Controllers
     public class HospitalController : Controller
 
     {
-        //     BookDb dbop=new BookDb();
         private readonly ApplicationDbContext _db;
 
         public HospitalController(ApplicationDbContext db)
@@ -24,30 +22,21 @@ namespace hospital.Controllers
         {
             List<DocDb> objDoctorList = _db.Docs.ToList();
 
-            return View();
+            return View(objDoctorList);
         }
         
         public IActionResult Book()
         {
             return View();
         }
-        //[HttpPost]
-        //public IActionResult Book(Book appin )
-        //{
-        //    var book = new Book();
-        //    {
-              
-        //        =appin.PatientName,
-        //         PatientAge = appin.PatientAge,
-        //            Pemail = appin.Pemail,
-        //            Dname = appin.Dname,
-        //           cno = appin.Cno
 
-        //    };
-        //}
-
-
-        //}
+        [HttpPost]
+        public IActionResult Book(Book appointments)
+        {
+            _db.Books.Add(appointments);
+            _db.SaveChanges();      
+             return RedirectToAction("Index");  
+        }
     }
 
 }
