@@ -1,0 +1,68 @@
+﻿@using hospital.Models;
+@model Book
+@{
+    ViewData["Title"] = "Book";
+}
+
+<h1 style="margin-top:11vh">Book Appointment</h1>
+    <br />
+
+<form method="post " style="font-size:smaller;padding-bottom:20vh">
+    <div class="row pb-2">
+        <h2 class="text-primary">Enter the Details
+
+        </h2>
+        <hr/>
+     
+        <div class="mb-3 p-0" >
+            <label asp-for="PatientName">  </label>
+            <input asp-for="PatientName" class="form-control" style="border:outset" />
+        </div>
+        </div>
+        
+        <div class="mb-3 row p-1">
+            <label asp-for="PatientAge"> </label>
+        <input asp-for="PatientAge" class="form-control" style="border:outset" />
+        </div>
+    <div class="mb-3 row p-3">
+        <label label asp-for="Dname"> </label>
+        <select id="doc" name="doc" style="border:outset ; padding:10px">
+            <option value="Dr.Arun Kumar">DR.ARUN KUMAR</option>
+            <option value="Dr.Venugopal Iyer">DR.VENUGOPAL IYER</option>
+            <option value="Dr.Venugopal Iyer">DR.Natasha ramonoff</option>
+            <option value="Dr.Venugopal Iyer">DR.VENUGOPAL IYER</option>
+        </select>
+    </div>
+    <div class="mb-3 row p-1">
+        <label  asp-for="Pemail"> </label>
+        <input asp-for="Pemail"  class="form-control" style="border:outset" />
+    </div>
+    <div class="mb-3 row p-1">
+        <label  asp-for="Cno"> </label>
+        <input asp-for="Cno"   class="form-control" style="border:outset" />
+    </div>
+    <div class="mb-3 row p-1">
+        <label asp-for="ApDate">Date </label>
+        <input asp-for="ApDate"  class="form-control" style="border:outset" />
+    </div>
+   
+        
+     <div class="row ">
+        <div class="col-6 col-md-3">
+            <input type="submit" value="submit" class="btn btn-primary form-control"/>
+         </div>   
+        <div class="col-6 col-md-3">
+            <a asp-controller="Hospital" asp-action="index" class="btn btn-outline-secondary form-control">Back</a>
+        </div>
+    </div>
+
+</form>
+@{
+    if (@TempData["msg"]!=null)
+    {
+        <script>
+        alert('@TempData["msg"])
+        </script>
+
+    }
+}

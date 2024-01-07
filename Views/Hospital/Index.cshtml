@@ -1,0 +1,170 @@
+﻿@using hospital.Models
+@model List<DocDb>
+
+<div class="container"style="margin-top:11vh">
+    <div class="row pt-4 pb-3">
+        <div class=" col-6 ">
+            <h2> Doctors & specialities</h2>
+        </div>
+        <div class=" col-6 text-end">
+            <a  asp-action="Book" class="btn btn-primary">
+                <i class="bi bi-plus-circle"></i> Book Appointment
+            </a>
+        </div>
+    </div>
+
+</div>
+<section class="container-fluid">
+    <div style="margin-top:5vh">
+        <h2 style="font:bolder">
+            Our Team
+        </h2>
+    </div>
+    <div class="container">
+        <div class="row pb-3">
+
+            <div class="col-lg-3 col-sm-6">
+                <div class="row p-2">
+                    <div class="col-12 p-1">
+                        <div class="card border-0 p-3 shadow border-top border-5 rounded">
+                            <img src="~/images/d1.jpg" class="card-img-top rounded" />
+                            <div class="card-body pb-0">
+                                <div class="p-1">
+                                    <p class="card-title h5 text-dark oppacity-75 text-uppercase text-center">DR.ARUN KUMAR </p>
+                                    <p class="card-title  text-warning text-center">CARDIOLOGIST</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="row p-2">
+                    <div class="col-12 p-1">
+                        <div class="card border-0 p-3 shadow border-top border-5 rounded">
+                            <img src="~/images/d2.jpg" class="card-img-top rounded" />
+                            <div class="card-body pb-0">
+                                <div class="p-1">
+                                    <p class="card-title h5 text-dark oppacity-75 text-uppercase text-center">DR.VENUGOPAL IYER</p>
+                                    <p class="card-title  text-warning text-center">DENTIST </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="row p-2">
+                    <div class="col-12 p-1">
+                        <div class="card border-0 p-3 shadow border-top border-5 rounded">
+                            <img src="~/images/d3.jpg" class="card-img-top rounded" />
+                            <div class="card-body pb-0">
+                                <div class="p-1">
+                                    <p class="card-title h5 text-dark oppacity-75 text-uppercase text-center">DR.STEVE ROGERS </p>
+                                    <p class="card-title  text-warning text-center">GENERAL PHYSICIAN </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="row p-2">
+                    <div class="col-12 p-1">
+                        <div class="card border-0 p-3 shadow border-top border-5 rounded">
+                            <img src="/images/css/images/d4.jpg" class="card-img-top rounded" />
+                            <div class="card-body pb-0">
+                                <div class="p-1">
+                                    <p class="card-title h5 text-dark oppacity-75 text-uppercase text-center">DR.TONY STARK </p>
+                                    <p class="card-title  text-warning text-center">BRAIN SPECIALIST </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<div style="height:14vh"></div>
+@*<table class="table table-bordered table-striped" style="margin-top:5vh">
+    <tr>
+        <th>
+            Doctor Name
+        </th>
+        <th>
+            Speciality
+        </th>
+        <th>
+            Fees
+        </th>
+    </tr>
+    <thead>
+
+    </thead>
+    <tbody>
+        @foreach (var obj in Model) {
+        <tr>
+            <td>
+                @obj.name
+            </td>
+            <td>
+                @obj.description
+            </td>
+             <td>
+                @obj.FEES
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>*@
+@*<div class="row pb-3">
+    
+    <div class="col-lg-3 col-sm-6">
+        <div class="row p-2">
+            <div class="col-12 p-1">
+                <div class="card border-0 p-3 shadow border-top border-5 rounded">
+                    <img src="~/images/d1.jpg"class="card-img-top rounded"/>
+                    <div class="card-body pb-0">
+                        <div class="p-1">
+                            <p class="card-title h5 text-dark oppacity-75 text-uppercase text-center">DR.ARUN KUMAR </p>
+                            <p class="card-title  text-warning text-center">CARDIOLOGIST</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-sm-6">
+        <div class="row p-2">
+            <div class="col-12 p-1">
+                <div class="card border-0 p-3 shadow border-top border-5 rounded">
+                    <img src="~/images/d2.jpg" class="card-img-top rounded" />
+                    <div class="card-body pb-0">
+                        <div class="p-1">
+                            <p class="card-title h5 text-dark oppacity-75 text-uppercase text-center">DR.VENUGOPAL IYER</p>
+                            <p class="card-title  text-warning text-center">DENTIST </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-sm-6">
+        <div class="row p-2">
+            <div class="col-12 p-1">
+                <div class="card border-0 p-3 shadow border-top border-5 rounded">
+                    <img src="~/images/d3.jpg" class="card-img-top rounded" />
+                    <div class="card-body pb-0">
+                        <div class="p-1">
+                            <p class="card-title h5 text-dark oppacity-75 text-uppercase text-center">DR.STEVE ROGERS </p>
+                            <p class="card-title  text-warning text-center">GENERAL PHYSICIAN </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>*@
