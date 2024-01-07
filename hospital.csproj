@@ -38,6 +38,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Remove="Models\Appointments.cs" />
+    <Compile Remove="Models\dtabase.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Remove="wwwroot\images\css\1.jpg" />
     <Content Remove="wwwroot\images\css\2.jpg" />
     <Content Remove="wwwroot\images\css\all.min.css" />

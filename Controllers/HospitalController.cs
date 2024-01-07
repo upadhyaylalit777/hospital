@@ -6,53 +6,48 @@ using Microsoft.Data.SqlClient;
 
 
 
+
 namespace hospital.Controllers
 {
     public class HospitalController : Controller
 
     {
-   //     BookDb dbop=new BookDb();
+        //     BookDb dbop=new BookDb();
         private readonly ApplicationDbContext _db;
-        
+
         public HospitalController(ApplicationDbContext db)
         {
             _db = db;
         }
-      
+
         public IActionResult Index()
         {
             List<DocDb> objDoctorList = _db.Docs.ToList();
-        
+
             return View();
         }
-
+        [HttpGet]
         public IActionResult Book()
         {
             return View();
         }
-       // [HttpPost]
-       // public IActionResult Book([Bind] Book bing) 
-       // {
-       //     try
-       //     {
-       //         if (ModelState.IsValid)
-       //         {
-                    
-       //             string res = dbop.Saverecord(bing);
-       //             TempData["msg"] = res;
-       //         }
-                
-       //     }
-       //     catch (Exception ex)
-       //     {
-       //         TempData["msg"] =ex.Message;
+        [HttpPost]
+        public IActionResult Book(Book appin )
+        {
+            var book = new Book();
+            {
+              
+                =appin.PatientName,
+                 PatientAge = appin.PatientAge,
+                    Pemail = appin.Pemail,
+                    Dname = appin.Dname,
+                   cno = appin.Cno
 
-       //     }
+            };
+        }
 
-            
-               
-       //     return View();
 
-       //}
+        }
     }
+
 }
